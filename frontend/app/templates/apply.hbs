@@ -1,0 +1,30 @@
+{{outlet}}
+
+<div class="lg:tw-mx-10 tw-mx-6 tw-my-8">
+  <p class="tw-my-6">Please write down the following information about the borrower when they call to apply for a loan with PayLater. All fields are required.</p>
+  {{#ui-form object=newApplication onSubmit=(action "createLoan") as |fa|}}
+    {{#ui-field-group}}
+      {{fa.ui-text-field name="borrower" label="Full Name"}}
+      {{fa.ui-text-field name="address" label="Address"}}
+    {{/ui-field-group}}
+
+    {{#ui-field-group}}
+      {{fa.ui-text-field name="email" label="Email"}}
+      {{fa.ui-text-field name="phone" label="Phone"}}
+    {{/ui-field-group}}
+
+    {{#ui-field-group}}
+      {{fa.ui-text-field name="vendor" label="School"}}
+      {{fa.ui-text-field name="amount" label="Loan Amount"}}
+    {{/ui-field-group}}
+
+    {{#ui-field-group}}
+      {{fa.ui-text-field name="income" label="Gross Annual Income"}}
+      {{fa.ui-text-field name="expense" label="Monthly Expense"}}
+    {{/ui-field-group}}
+
+    {{#ui-button onClick=(action "createLoan")}}
+      Submit
+    {{/ui-button}}
+  {{/ui-form}}
+</div>

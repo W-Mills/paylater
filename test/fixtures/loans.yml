@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borrower_id: 9.99
+  vendor_id: 9.99
+  lender_id: MyString
+  decimal: MyString
+  amount: 9.99
+  category: MyString
+
+two:
+  borrower_id: 9.99
+  vendor_id: 9.99
+  lender_id: MyString
+  decimal: MyString
+  amount: 9.99
+  category: MyString

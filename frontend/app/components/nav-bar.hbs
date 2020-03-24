@@ -1,0 +1,15 @@
+<nav class="tw-h-16 tw-flex tw-justify-between tw-items-center tw-border-b tw-border-ui-gray-60 tw-bg-white tw-px-5">
+  <span class="tw-font-headline tw-text-2xl">
+    <img src="/assets/images/PayLaterLogo.svg" class="tw-py-2 tw-h-18">
+  </span>
+  <div class="tw-flex tw-float-right">
+    {{#ui-button kind="tertiary" icon="list" onClick=(action "goToList")}}
+      List
+    {{/ui-button}}
+    <span class="tw-ml-1">
+      {{#ui-button icon="plus" onClick=(action "goToApply")}}
+        Apply
+      {{/ui-button}}
+    </span>
+  </div>
+</nav>

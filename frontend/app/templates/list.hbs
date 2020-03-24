@@ -1,0 +1,51 @@
+{{outlet}}
+
+{{!-- {{#each this.model as |borrower|}}
+  <div>
+    <h2>{{borrower.name}}</h2>
+    <p>{{borrower.phone}}</p>
+    <p>{{borrower.income}}</p>
+  </div>
+{{/each}} --}}
+
+{{!-- {{ui-button text="Tag Button" icon="home"}} --}}
+
+
+<main class="lg:tw-flex">
+  {{#each reverse this.model as |loan|}}
+    <section class="card tw-mx-6 tw-my-6 tw-w-md">
+      {{#ui-card borderColor="interactive-40"}}
+        <article class="tw-justify-between tw-items-center">
+          <section class="core-info tw-flex tw-p-1">
+            <div class="tw-flex tw-flex-1">
+              {{ui-icon name="user" iconSize=6}}
+              <h2 class="tw-ml-3">{{loan.borrower.name}}</h2>
+            </div>
+            <div class="tw-text-interactive-100 tw-text-bold tw-text-2xl tw-ml-5">
+              <span>${{loan.amount}}</span>
+            </div>
+          </section>
+          <section class="more-info tw-p-2">
+            <div class="tw-py-1">
+              {{ui-icon name="invited" iconSize=4}}
+              {{loan.borrower.email}}
+            </div>
+            <div class="tw-py-1">
+              {{ui-icon name="phone" iconSize=4}}
+              {{loan.borrower.phone}}
+            </div>
+            <div class="tw-py-1">
+              {{ui-icon name="home-ownership-verification" iconSize=4}}
+              {{loan.vendor.name}}
+            </div>
+            <div class="tw-py-1">
+              {{ui-icon name="money" iconSize=4}}
+              {{loan.borrower.income}}/yr
+            </div>
+          </section>
+        </article>
+      {{/ui-card}}
+    </section>
+  {{/each}}
+
+</main>
